@@ -237,8 +237,9 @@
       .hero__art {
         position: relative;
         display: flex;
-        min-height: 0;
+        flex-direction: column;
         align-items: center;
+        min-height: 0;
         justify-content: flex-end;
         overflow: visible;
         border: none;
@@ -889,6 +890,18 @@
         padding: 0;
       }
 
+      .curriculum-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .curriculum-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       @media (max-width: 960px) {
         .village-grid {
           grid-template-columns: 1fr;
@@ -1088,7 +1101,7 @@
 
       <section id="curriculum" class="section" aria-labelledby="curriculum-title">
         <h2 id="curriculum-title" class="sr-only">
-          단계별로 쌓아가는 탄탄한 경제 개념 레벨업 시스템
+          단계별로 쌓아가는 연령별 커리큘럼
         </h2>
         <div class="level-section" style="padding: 64px 0;">
           <div class="container">
@@ -1098,7 +1111,7 @@
               <div>
                 <span class="label">학습 과정</span>
                 <h2 style="margin:8px 0 0;font-size:clamp(24px,2.8vw,36px);font-weight:900;letter-spacing:-.045em;line-height:1.2;color:#071d36;">
-                  단계별로 쌓아가는 <span class="accent">레벨업 시스템</span>
+                  단계별로 쌓아가는 <span class="accent">연령별 커리큘럼</span>
                 </h2>
               </div>
               <p style="margin:0;color:#6380a0;font-size:14px;font-weight:500;max-width:340px;line-height:1.7;">
@@ -1107,7 +1120,7 @@
             </div>
 
             <!-- 연령별 3개 카드 -->
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+            <div class="curriculum-grid">
               <div style="border-radius:14px;border:1px solid #e0f7fa;background:#f7feff;padding:18px 20px;">
                 <span style="font-size:11px;font-weight:900;color:#006064;background:#e0f7fa;border-radius:99px;padding:3px 9px;">초등 저학년 · 8~10세</span>
                 <p style="margin:10px 0 8px;font-size:14px;font-weight:900;color:#071d36;">돈의 개념 &amp; 저축 기초</p>
@@ -1158,7 +1171,7 @@
               <img
                 src="./assets/village-mockup.png"
                 alt="코코노미 경제마을 앱 화면"
-                style="width:min(100%,400px);height:auto;border-radius:20px;box-shadow:0 24px 48px rgba(84,146,157,0.15);"
+                style="width:min(100%,400px);height:auto;border-radius:20px;box-shadow:0 24px 48px rgba(84,146,157,0.15);mix-blend-mode:multiply;"
               />
               <p style="margin:10px 0 0;font-size:11px;color:#6e9aad;text-align:center;">※ 실제 출시 후 디자인이 변경될 수 있습니다</p>
             </div>
